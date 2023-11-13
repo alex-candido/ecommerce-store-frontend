@@ -8,10 +8,14 @@ export const metadata = {
   description: 'Store - The place for all your purchases.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
