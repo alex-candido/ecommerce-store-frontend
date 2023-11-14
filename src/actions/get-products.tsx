@@ -1,14 +1,14 @@
 import { api } from '@/lib/fetcher';
 
-interface IUserStoreProps {
+interface IProductsProps {
   storeId: string;
 }
 
-const getAllCategories = async ({
+const getAllProducts = async ({
   storeId,
-}: IUserStoreProps): Promise<CategoryData[]> => {
+}: IProductsProps): Promise<ProductData[]> => {
   try {
-    const url = `/api/${storeId}/categories`;
+    const url = `/api/${storeId}/products`;
     const { data } = await api.get(url);
 
     return data;
@@ -20,4 +20,4 @@ const getAllCategories = async ({
   }
 };
 
-export default getAllCategories;
+export default getAllProducts;
