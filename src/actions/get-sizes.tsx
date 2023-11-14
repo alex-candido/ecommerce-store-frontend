@@ -1,12 +1,8 @@
 import { api } from '@/lib/fetcher';
 
-interface ISizesProps {
-  storeId: string;
-}
-
-const getAllSizes = async ({ storeId }: ISizesProps): Promise<SizeData[]> => {
+const getAllSizes = async (): Promise<SizeData[]> => {
   try {
-    const url = `/api/${storeId}/sizes`;
+    const url = `/api/${process.env.NEXT_STORE_API_ID}/sizes`;
     const { data } = await api.get(url);
 
     return data;

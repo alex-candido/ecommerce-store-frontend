@@ -1,14 +1,8 @@
 import { api } from '@/lib/fetcher';
 
-interface IColorsProps {
-  storeId: string;
-}
-
-const getAllColors = async ({
-  storeId,
-}: IColorsProps): Promise<ColorData[]> => {
+const getAllColors = async (): Promise<ColorData[]> => {
   try {
-    const url = `/api/${storeId}/colors`;
+    const url = `/api/${process.env.NEXT_STORE_API_ID}/colors`;
     const { data } = await api.get(url);
 
     return data;

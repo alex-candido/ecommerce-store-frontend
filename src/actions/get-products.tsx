@@ -1,14 +1,8 @@
 import { api } from '@/lib/fetcher';
 
-interface IProductsProps {
-  storeId: string;
-}
-
-const getAllProducts = async ({
-  storeId,
-}: IProductsProps): Promise<ProductData[]> => {
+const getAllProducts = async (): Promise<ProductData[]> => {
   try {
-    const url = `/api/${storeId}/products`;
+    const url = `/api/${process.env.NEXT_STORE_API_ID}/products`;
     const { data } = await api.get(url);
 
     return data;
