@@ -1,8 +1,12 @@
+import Container from '@/components/ui/container';
+
 const HomePage = () => {
   return (
-    <div className="mx-auto max-w-7xl">
-      <h1>Hello World</h1>
-    </div>
+    <Container>
+      <div className="space-y-10 pb-10">
+        <h1>Hello World</h1>
+      </div>
+    </Container>
   );
 };
 
