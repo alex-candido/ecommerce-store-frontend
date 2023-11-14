@@ -1,3 +1,7 @@
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
+import ModalProvider from '@/providers/modal-provider';
+import ToastProvider from '@/providers/toast-provider';
 import { Urbanist } from 'next/font/google';
 import './globals.css';
 
@@ -8,10 +12,20 @@ export const metadata = {
   description: 'Store - The place for all your purchases.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <ToastProvider />
+        <ModalProvider />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
