@@ -13,11 +13,13 @@
   },
   "author": "Alex Cândido <alex.candido.tec@gmail.com>",
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "axios": "^1.6.1",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "lucide-react": "^0.292.0",
     "next": "14.0.2",
+    "query-string": "^8.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
