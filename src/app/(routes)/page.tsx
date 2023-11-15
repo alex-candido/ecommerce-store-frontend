@@ -12,8 +12,6 @@ const HomePage = async () => {
     billboardId: '21f2175d-6624-46ae-a49c-a4101a5e9097',
   });
 
-  console.log(products);
-
   return (
     <Container>
       <div className="space-y-10 pb-10">
