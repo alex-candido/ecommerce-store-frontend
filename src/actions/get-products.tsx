@@ -1,9 +1,29 @@
 import { api } from '@/lib/fetcher';
 
-const getAllProducts = async (): Promise<ProductData[]> => {
+interface IProductsProps {
+  categoryId?: string;
+  colorId?: string;
+  sizeId?: string;
+  isFeatured?: boolean;
+}
+
+const getAllProducts = async ({
+  colorId,
+  sizeId,
+  categoryId,
+  isFeatured,
+}: IProductsProps): Promise<ProductData[]> => {
   try {
     const url = `/api/${process.env.NEXT_STORE_API_ID}/products`;
-    const { data } = await api.get(url);
+
+    const { data } = await api.get(url, {
+      params: {
+        colorId,
+        sizeId,
+        categoryId,
+        isFeatured,
+      },
+    });
 
     return data;
   } catch (error) {

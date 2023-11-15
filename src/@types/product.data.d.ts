@@ -5,7 +5,7 @@ interface ProductData {
   categoryId: string;
   category: CategoryData;
   name: string;
-  price: float;
+  price: float | number;
   isFeatured: boolean;
   isArchived: boolean;
   sizeId: string;
