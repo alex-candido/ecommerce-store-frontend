@@ -1,5 +1,0 @@
-## Gerenciamento Ramificações do Sistema
-
-- staging
-  - **Descrição**
-    - Branch de homologação
